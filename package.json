@@ -1,0 +1,27 @@
+{
+  "name": "exam-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.24.4",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1",
+    "normalize.css": "^8.0.0",
+    "npm": "^6.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xike121/exam-task.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xike121/exam-task/issues"
+  },
+  "homepage": "https://github.com/xike121/exam-task#readme"
+}
