@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 54" width="50" height="54">
+	<defs>
+		<filter id="flt1"> <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1   0 0 0 1 0" /> </filter>
+		<image width="50" height="54" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAA2CAMAAACycDqVAAAAk1BMVEX///8jICAjHyAjHyAkICEjHyAjHyAjHyAkICEjHyAjICAjHyAjICAkICEjICAjICEjHyAkICEjHyAjHyAjICAjICAkICEjHyAjHyAjHyAkICEjICAkICEkICEjICAjHyAjICAkICEjHyAjICEkICEjHyAkICEkICEkICEjICAkICEjICAkICEjICAjICEjICAjICBiJeKmAAAAMXRSTlMAUICvv7+PYCAQ7////0BQ799Qz48Qj0Agn8+fUBBgML9wcP9g35/vMHBAr4DfMM8wQLD5WwAAAmhJREFUeJydlQ17ojAMx7FQmP4broqzspsDt+Ec5718/093qaDCaJG7PD6UJv5MTJM0CFwyE2Ek4+TBaXTIXCygCAQgTCcR3zSwjJN0JTJArR/vExuizLTv25zoaX6P+A7Ene2zRrYbJ16ApKcoFqocJR40xBdVodV+DJGQA93rmx75OwZqe9tdIpTY+JFc5bfNFu/NS6r8bnY9JxFVba6WlLiBIFhRdn2fh3z4rc89Dj5E3IJOKvrYK2qYo1r6EElhYdficwlURfDORXaOFORDnjgWZJl9amH/ccJFlpVSkjIehIPXIIIOkzZFRQg6F7UPUda/6VvnqTFppnxNoODJf0Q+LxFqt6HyIhKeIyN4iECQu5hS8p5LDbcpVt7TDxZwZqbCyovkyB3aF9Jeguvd5aYadGrfTTbQCYx1ZfD4MQjtmTAbIXiy4gtj9Ei6GuHi/dGJY080HCADhrAQLbSShHzChC24Xag8iVOoFfzN1RPA9hoPftIC3urqIxRsE3ESn1y+pKYhna9N9EJv/4qkXS9E4+fIso1/9rLEOas2I1fmLrGp0ofjTVXEmgdMlrirbJXbxIaD1pjxqCU6DPS/1hVPrGzv/LX5a8bG5bobYPLbBhT/8cdsA1R4uuSChzyX0t3MzEIFCs9hzNmruHPrNrI74S2zzAa6mAJYOWp7nzzANyNdYkDbIHZcwiNy4GtKjgwph6xQcalPaLuO8Hye2BFdZGJHXAX/hSjIMopkI6WMZNSul2ckyzIqz1tWRNYL104jdHleNVeDai3nNaj5+jS1qfljjKlTuzFpo7RrbZeU9Y2ZH38Bf80oUzUb8kEAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+	</style>
+	<use id="Icon-AboutUs" style="filter: url(#flt1)" href="#img1" x="0" y="0" />
+</svg>
