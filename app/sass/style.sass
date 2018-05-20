@@ -24,22 +24,23 @@ div
    font-family: 'Montserrat', sans-serif
 
 .first-section,
-.second-section
+.second-section,
+.third-section
    padding: 0 15%
 
 .first-section
    display: flex
    flex-direction: column
    padding-top: 3%
+   max-height: 1070px
+   min-height: 600px
    height: 100vh
    width: 100%
-   max-height: 1070px
    background-image: url(../img/png/first-section-bg.png)
    background-color: #9f9acf
    background-size: cover
    background-repeat: no-repeat
    background-position: bottom
-
 
 .header
    display: flex
@@ -98,11 +99,10 @@ div
 
 .title
    margin: 0
-   margin-top: 25vh
+   margin-top: 25%
    text-transform: uppercase
    font-size: 60px
    color: rgb(254,254,251)
-   font-family: "Montserrat", sans-serif
    font-weight: 700
    text-align: center
 
@@ -131,8 +131,9 @@ div
    flex-direction: row
    align-items: center
    justify-content: space-between
-   height: 100vh
    max-height: 800px
+   min-height: 440px
+   height: 100vh
    background-color: #ebebeb
 
    +breakpoint(1100px)
@@ -146,25 +147,20 @@ div
    display: flex
    flex-direction: column
    align-items: center
-   position: relative
    width: 100%
-   height: 70vh
+   height: 70%
    max-width: 382px
    max-height: 555px
    background-color: #9f9acf
    background-image: url(../img/png/about-us-bg.png)
    background-position: -170px -25px
    background-repeat: no-repeat
-   bg-size: cover
 
    &__icon
-      position: absolute
-      top: 75px
+      margin-top: 75px
 
    &__title
-      position: absolute
-      top: 170px
-      margin: 0
+      margin-top: 45px
       color: #fefbfc
       font-size: 36px
       font-weight: 500
@@ -174,15 +170,24 @@ div
    display: flex
    flex-direction: column
    align-items: center
+   position: relative
    margin-left: 8%
    max-width: 635px
+   width: 100%
    font-size: 20px
    font-family: "PT Sans", sans-serif
    color: #665f60
 
    +breakpoint(1100px)
       margin-left: 0
+   +breakpoint(1400px)
+      max-width: 356px
+   
+   &__paragraph-1
+      width: 100%
 
+   &__paragraph-2
+      width: 100%
 
    &__learn-more-btn
       margin-top: 11vh
@@ -194,8 +199,146 @@ div
       cursor: pointer
 
       +outline-btn(#7d7a7c, transparent)
-      +breakpoint(1220px)
+      +breakpoint(1400px)
          margin-top: 5vh
 
       &:hover
          +outline-btn(#ebebeb, #7d7a7c)
+
+.third-section
+   max-height: 800px
+   min-height: 650px
+   height: 100vh
+   background-color: #ebebeb
+
+   +breakpoint(1200px)
+      height: 150vh
+      max-height: 1500px
+      min-height: 1000px
+
+   +breakpoint(760px)
+      min-height: 1800px
+      max-height: 2400px
+      height: 300vh
+
+.cards-deck
+   display: flex
+   flex-direction: row
+   width: 100%
+   height: 100%
+
+   +breakpoint(1200px)
+      flex-direction: column
+
+   & :first-child
+      +breakpoint(760px)
+         flex-direction: column-reverse
+
+.cards-wrapper
+   //position: relative
+   display: flex
+   flex-direction: column
+   min-width: 32.5%
+   //max-height: 800px
+   //min-height: 625px
+   height: 100%
+
+   +breakpoint(1200px)
+      flex-direction: row
+      width: 100%
+      height: 30%
+
+   +breakpoint(760px)
+      flex-direction: column
+      width: 100%
+      height: 40%
+
+.card
+   position: relative
+   height: 50%
+   overflow: hidden
+
+   +breakpoint(1200px)
+      min-width: 50%
+      height: 100%
+   
+   +breakpoint(760px)
+      height: 50%
+
+   &__icon
+      position: absolute
+      top: 25%
+      left: 50%
+      transform: translate(-50%)
+
+      //+breakpoint(1200px)
+        //top: 10%
+
+   &__title
+      position: absolute
+      top: 47%
+      margin: 0
+      width: 100%
+      font-size: 24px
+      color: rgb(102,95,96)
+      font-family: "PT Sans", sans-serif
+      text-align: center
+
+      //+breakpoint(1200px)
+        // top: 40%
+
+   &__description
+      position: absolute
+      top: 57%
+      left: 50%
+      transform: translate(-50%)
+      margin: 0
+      width: 70%
+      font-size: 18px
+      color: rgb(102,95,96)
+      font-family: "P TSans"
+      font-style: italic
+      text-align: center
+
+      +breakpoint(760px)
+         top: 65%
+
+   &--darker
+      background-color: #dbdbdb
+
+   &--special
+      min-width: 35%
+      //min-height: 625px
+      height: 100%
+      background-color: #9f9acf
+      background-image: url(../img/png/our-services-bg.png)
+      background-position: -500px
+      background-repeat: no-repeat
+
+      +breakpoint(1200px)
+         height: 40%
+         background-position: bottom
+
+      +breakpoint(760px)
+         height: 20%
+         max-height: 800px
+
+      &__icon
+         top: 14.6%
+      
+      &__title
+         top: 26%
+         font-size: 36px
+         color: rgb(254,252,253)
+         font-family: "Montserrat", sans-serif
+         font-weight: 500
+
+         +breakpoint(1200px)
+            top: 32%
+
+      &__description
+         top: 48%
+         color: rgb(254,252,253)
+
+         +breakpoint(760px)
+            top: 58%

@@ -15,7 +15,8 @@ div {
   font-family: 'Montserrat', sans-serif; }
 
 .first-section,
-.second-section {
+.second-section,
+.third-section {
   padding: 0 15%; }
 
 .first-section {
@@ -27,9 +28,10 @@ div {
       -ms-flex-direction: column;
           flex-direction: column;
   padding-top: 3%;
+  max-height: 1070px;
+  min-height: 600px;
   height: 100vh;
   width: 100%;
-  max-height: 1070px;
   background-image: url(../img/png/first-section-bg.png);
   background-color: #9f9acf;
   background-size: cover;
@@ -111,11 +113,10 @@ div {
 
 .title {
   margin: 0;
-  margin-top: 25vh;
+  margin-top: 25%;
   text-transform: uppercase;
   font-size: 60px;
   color: #fefefb;
-  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   text-align: center; }
   @media screen and (max-width: 1270px) {
@@ -155,8 +156,9 @@ div {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 100vh;
   max-height: 800px;
+  min-height: 440px;
+  height: 100vh;
   background-color: #ebebeb; }
   @media screen and (max-width: 1100px) {
     .second-section {
@@ -180,23 +182,18 @@ div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
   width: 100%;
-  height: 70vh;
+  height: 70%;
   max-width: 382px;
   max-height: 555px;
   background-color: #9f9acf;
   background-image: url(../img/png/about-us-bg.png);
   background-position: -170px -25px;
-  background-repeat: no-repeat;
-  bg-size: cover; }
+  background-repeat: no-repeat; }
   .about-us__icon {
-    position: absolute;
-    top: 75px; }
+    margin-top: 75px; }
   .about-us__title {
-    position: absolute;
-    top: 170px;
-    margin: 0;
+    margin-top: 45px;
     color: #fefbfc;
     font-size: 36px;
     font-weight: 500;
@@ -213,14 +210,23 @@ div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
   margin-left: 8%;
   max-width: 635px;
+  width: 100%;
   font-size: 20px;
   font-family: "PT Sans", sans-serif;
   color: #665f60; }
   @media screen and (max-width: 1100px) {
     .description {
       margin-left: 0; } }
+  @media screen and (max-width: 1400px) {
+    .description {
+      max-width: 356px; } }
+  .description__paragraph-1 {
+    width: 100%; }
+  .description__paragraph-2 {
+    width: 100%; }
   .description__learn-more-btn {
     margin-top: 11vh;
     width: 195px;
@@ -233,10 +239,153 @@ div {
     color: #7d7a7c;
     border-color: #7d7a7c;
     background-color: transparent; }
-    @media screen and (max-width: 1220px) {
+    @media screen and (max-width: 1400px) {
       .description__learn-more-btn {
         margin-top: 5vh; } }
     .description__learn-more-btn:hover {
       color: #ebebeb;
       border-color: #ebebeb;
       background-color: #7d7a7c; }
+
+.third-section {
+  max-height: 800px;
+  min-height: 650px;
+  height: 100vh;
+  background-color: #ebebeb; }
+  @media screen and (max-width: 1200px) {
+    .third-section {
+      height: 150vh;
+      max-height: 1500px;
+      min-height: 1000px; } }
+  @media screen and (max-width: 760px) {
+    .third-section {
+      min-height: 1800px;
+      max-height: 2400px;
+      height: 300vh; } }
+
+.cards-deck {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  height: 100%; }
+  @media screen and (max-width: 1200px) {
+    .cards-deck {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
+  @media screen and (max-width: 760px) {
+    .cards-deck :first-child {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+          -ms-flex-direction: column-reverse;
+              flex-direction: column-reverse; } }
+
+.cards-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-width: 32.5%;
+  height: 100%; }
+  @media screen and (max-width: 1200px) {
+    .cards-wrapper {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      width: 100%;
+      height: 30%; } }
+  @media screen and (max-width: 760px) {
+    .cards-wrapper {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      width: 100%;
+      height: 40%; } }
+
+.card {
+  position: relative;
+  height: 50%;
+  overflow: hidden; }
+  @media screen and (max-width: 1200px) {
+    .card {
+      min-width: 50%;
+      height: 100%; } }
+  @media screen and (max-width: 760px) {
+    .card {
+      height: 50%; } }
+  .card__icon {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%); }
+  .card__title {
+    position: absolute;
+    top: 47%;
+    margin: 0;
+    width: 100%;
+    font-size: 24px;
+    color: #665f60;
+    font-family: "PT Sans", sans-serif;
+    text-align: center; }
+  .card__description {
+    position: absolute;
+    top: 57%;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+    margin: 0;
+    width: 70%;
+    font-size: 18px;
+    color: #665f60;
+    font-family: "P TSans";
+    font-style: italic;
+    text-align: center; }
+    @media screen and (max-width: 760px) {
+      .card__description {
+        top: 65%; } }
+  .card--darker {
+    background-color: #dbdbdb; }
+  .card--special {
+    min-width: 35%;
+    height: 100%;
+    background-color: #9f9acf;
+    background-image: url(../img/png/our-services-bg.png);
+    background-position: -500px;
+    background-repeat: no-repeat; }
+    @media screen and (max-width: 1200px) {
+      .card--special {
+        height: 40%;
+        background-position: bottom; } }
+    @media screen and (max-width: 760px) {
+      .card--special {
+        height: 20%;
+        max-height: 800px; } }
+    .card--special__icon {
+      top: 14.6%; }
+    .card--special__title {
+      top: 26%;
+      font-size: 36px;
+      color: #fefcfd;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500; }
+      @media screen and (max-width: 1200px) {
+        .card--special__title {
+          top: 32%; } }
+    .card--special__description {
+      top: 48%;
+      color: #fefcfd; }
+      @media screen and (max-width: 760px) {
+        .card--special__description {
+          top: 58%; } }
