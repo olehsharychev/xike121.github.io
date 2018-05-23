@@ -25,8 +25,10 @@ div
 
 .first-section,
 .second-section,
-.third-section
+.third-section,
+.fifth-section
    padding: 0 15%
+
 
 .first-section
    display: flex
@@ -61,7 +63,7 @@ div
          outline: none
       
       &--active
-         color: #000
+         color: #807D9B
 
 .menu
    display: flex
@@ -81,6 +83,7 @@ div
       width: inherit
       top: 85px
       right: 15%
+      background-color: #807D9B
 
    & :nth-child(2n)
       +breakpoint(1150px)
@@ -142,6 +145,9 @@ div
       padding-bottom: 15px
       height: auto
       max-height: 1600px
+
+   +breakpoint(420px)
+      padding: 0
 
 .about-us
    display: flex
@@ -221,6 +227,9 @@ div
       max-height: 2400px
       height: 300vh
 
+   +breakpoint(420px)
+      padding: 0
+
 .cards-deck
    display: flex
    flex-direction: row
@@ -235,12 +244,9 @@ div
          flex-direction: column-reverse
 
 .cards-wrapper
-   //position: relative
    display: flex
    flex-direction: column
    min-width: 32.5%
-   //max-height: 800px
-   //min-height: 625px
    height: 100%
 
    +breakpoint(1200px)
@@ -271,9 +277,6 @@ div
       left: 50%
       transform: translate(-50%)
 
-      //+breakpoint(1200px)
-        //top: 10%
-
    &__title
       position: absolute
       top: 47%
@@ -283,9 +286,6 @@ div
       color: rgb(102,95,96)
       font-family: "PT Sans", sans-serif
       text-align: center
-
-      //+breakpoint(1200px)
-        // top: 40%
 
    &__description
       position: absolute
@@ -308,7 +308,6 @@ div
 
    &--special
       min-width: 35%
-      //min-height: 625px
       height: 100%
       background-color: #9f9acf
       background-image: url(../img/png/our-services-bg.png)
@@ -342,3 +341,113 @@ div
 
          +breakpoint(760px)
             top: 58%
+
+.fourth-section
+   display: flex
+   flex-direction: column
+   align-items: center
+   max-height: 1000px
+   min-height: 900px
+   height: 100vh
+   background-color: #b6b2d7
+   background-image: url(../img/png/fourth-section-bg.png)
+   background-repeat: no-repeat
+   background-size: cover
+   background-position: top
+
+   &__title-icon
+      margin-top: 50px
+
+   &__title
+      margin-top: 30px
+      margin-bottom: 0
+      font-size: 36px
+      font-weight: 700
+      color: rgb(254,252,253)
+      text-transform: uppercase
+
+   &__slider
+      margin-top: 60px
+
+   &__view-btn
+      margin-top: 25px
+      width: 155px
+      height: 50px
+      border: 1px solid #fff
+      transition: 0.5s
+      font-family: "PT Sans", sans-serif
+      font-size: 20px
+      font-style: italic
+      cursor: pointer
+
+      +outline-btn(#fff, transparent)
+
+      &:hover
+         +outline-btn(#b6b2d7, #fff)
+
+   
+   .slick-prev
+      left: -30%
+      +breakpoint(1200px)
+         left: -10%
+
+      &::before
+         content: url(../img/svg/arrow-prev.svg)
+         font-size: 40px
+
+   .slick-next
+      right: -30%
+      +breakpoint(1200px)
+         right: -10%
+
+      &::before
+         content: url(../img/svg/arrow-next.svg)
+         font-size: 40px
+
+   .slick-dots
+      bottom: -40px
+
+   .slick-list
+      max-height: 550px
+      height: 55vh
+      overflow: hidden
+
+   #slick-slide-control
+      &00::before,
+      &01::before,
+      &02::before,
+      &03::before
+         width: 10px
+         height: 10px
+         color: transparent
+         border: 2px solid #ebebeb
+         border-radius: 50%
+         opacity: 1
+
+   .slick-active
+      #slick-slide-control
+         &00::before,
+         &01::before,
+         &02::before,
+         &03::before
+            color: transparent
+            background-color: #ebebeb
+
+.slider
+   width: 45%
+   
+   +breakpoint(1200px)
+      width: 70%
+   
+   +breakpoint(760px)
+      width: 100%
+
+   &__item
+      //min-height: 400px
+      //max-height: 550px
+      //height: 55vh
+      overflow: hidden
+
+      img
+         width: 100%
+

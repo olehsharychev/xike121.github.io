@@ -11,4 +11,20 @@ $(document).ready(function(){
          collapseBtn.removeClass('header__collapse-btn--active');
       }
    });
+
+   $('.fourth-section__slider').slick({
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: true,
+      adaptiveHeight: true,
+      responsive: [
+         {
+            breakpoint: 760,
+            settings: {
+               arrows: false
+            }
+         }
+      ]
+   });
 });

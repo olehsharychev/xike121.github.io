@@ -16,7 +16,8 @@ div {
 
 .first-section,
 .second-section,
-.third-section {
+.third-section,
+.fifth-section {
   padding: 0 15%; }
 
 .first-section {
@@ -61,7 +62,7 @@ div {
     .header__collapse-btn:focus {
       outline: none; }
     .header__collapse-btn--active {
-      color: #000; }
+      color: #807D9B; }
 
 .menu {
   display: -webkit-box;
@@ -87,7 +88,8 @@ div {
       position: absolute;
       width: inherit;
       top: 85px;
-      right: 15%; } }
+      right: 15%;
+      background-color: #807D9B; } }
   @media screen and (max-width: 1150px) {
     .menu :nth-child(2n) {
       background-color: #9f9acf; } }
@@ -170,6 +172,9 @@ div {
       padding-bottom: 15px;
       height: auto;
       max-height: 1600px; } }
+  @media screen and (max-width: 420px) {
+    .second-section {
+      padding: 0; } }
 
 .about-us {
   display: -webkit-box;
@@ -262,6 +267,9 @@ div {
       min-height: 1800px;
       max-height: 2400px;
       height: 300vh; } }
+  @media screen and (max-width: 420px) {
+    .third-section {
+      padding: 0; } }
 
 .cards-deck {
   display: -webkit-box;
@@ -389,3 +397,97 @@ div {
       @media screen and (max-width: 760px) {
         .card--special__description {
           top: 58%; } }
+
+.fourth-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-height: 1000px;
+  min-height: 900px;
+  height: 100vh;
+  background-color: #b6b2d7;
+  background-image: url(../img/png/fourth-section-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top; }
+  .fourth-section__title-icon {
+    margin-top: 50px; }
+  .fourth-section__title {
+    margin-top: 30px;
+    margin-bottom: 0;
+    font-size: 36px;
+    font-weight: 700;
+    color: #fefcfd;
+    text-transform: uppercase; }
+  .fourth-section__slider {
+    margin-top: 60px; }
+  .fourth-section__view-btn {
+    margin-top: 25px;
+    width: 155px;
+    height: 50px;
+    border: 1px solid #fff;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    font-family: "PT Sans", sans-serif;
+    font-size: 20px;
+    font-style: italic;
+    cursor: pointer;
+    color: #fff;
+    border-color: #fff;
+    background-color: transparent; }
+    .fourth-section__view-btn:hover {
+      color: #b6b2d7;
+      border-color: #b6b2d7;
+      background-color: #fff; }
+  .fourth-section .slick-prev {
+    left: -30%; }
+    @media screen and (max-width: 1200px) {
+      .fourth-section .slick-prev {
+        left: -10%; } }
+    .fourth-section .slick-prev::before {
+      content: url(../img/svg/arrow-prev.svg);
+      font-size: 40px; }
+  .fourth-section .slick-next {
+    right: -30%; }
+    @media screen and (max-width: 1200px) {
+      .fourth-section .slick-next {
+        right: -10%; } }
+    .fourth-section .slick-next::before {
+      content: url(../img/svg/arrow-next.svg);
+      font-size: 40px; }
+  .fourth-section .slick-dots {
+    bottom: -40px; }
+  .fourth-section .slick-list {
+    max-height: 550px;
+    height: 55vh;
+    overflow: hidden; }
+  .fourth-section #slick-slide-control00::before, .fourth-section #slick-slide-control01::before, .fourth-section #slick-slide-control02::before, .fourth-section #slick-slide-control03::before {
+    width: 10px;
+    height: 10px;
+    color: transparent;
+    border: 2px solid #ebebeb;
+    border-radius: 50%;
+    opacity: 1; }
+  .fourth-section .slick-active #slick-slide-control00::before, .fourth-section .slick-active #slick-slide-control01::before, .fourth-section .slick-active #slick-slide-control02::before, .fourth-section .slick-active #slick-slide-control03::before {
+    color: transparent;
+    background-color: #ebebeb; }
+
+.slider {
+  width: 45%; }
+  @media screen and (max-width: 1200px) {
+    .slider {
+      width: 70%; } }
+  @media screen and (max-width: 760px) {
+    .slider {
+      width: 100%; } }
+  .slider__item {
+    overflow: hidden; }
+    .slider__item img {
+      width: 100%; }
