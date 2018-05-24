@@ -18,6 +18,8 @@ $(document).ready(function(){
       slidesToScroll: 1,
       dots: true,
       adaptiveHeight: true,
+      autoplay: true,
+      autoplaySpeed: 3000,
       responsive: [
          {
             breakpoint: 760,
@@ -27,4 +29,36 @@ $(document).ready(function(){
          }
       ]
    });
+   
+   $('.fifth-section__team-slider').slick({
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      dots: false,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      responsive: [
+         {
+            breakpoint: 1100,
+            settings: {
+               slidesToShow: 2
+            }
+         },
+         {
+            breakpoint: 700,
+            settings: {
+               slidesToShow: 2,
+               arrows: false
+            }
+         },
+         {
+            breakpoint: 550,
+            settings: {
+               slidesToShow: 1,
+               arrows: false
+            }
+         }
+      ]
+   });
+   
 });

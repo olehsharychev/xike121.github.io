@@ -25,8 +25,7 @@ div
 
 .first-section,
 .second-section,
-.third-section,
-.fifth-section
+.third-section
    padding: 0 15%
 
 
@@ -367,7 +366,7 @@ div
       text-transform: uppercase
 
    &__slider
-      margin-top: 60px
+      margin-top: 20px
 
    &__view-btn
       margin-top: 25px
@@ -443,11 +442,108 @@ div
       width: 100%
 
    &__item
-      //min-height: 400px
-      //max-height: 550px
-      //height: 55vh
       overflow: hidden
 
       img
          width: 100%
+
+.fifth-section
+   display: flex
+   flex-direction: column
+   align-items: center
+   min-height: 690px
+   max-height: 820px
+   height: 100vh
+   background-color: #ebebeb
+   
+   &__icon
+      margin-top: 50px
+
+   &__title
+      margin: 30px 0 0 0
+      font-size: 36px
+      color: rgb(102,95,96)
+      text-transform: uppercase
+
+   &__team-slider
+      margin-top: 60px
+      width: 70%
+
+      +breakpoint(700px)
+         width: 100%
+
+      +breakpoint(550px)
+         width: 80%
+
+.team-slider
+
+   .slick-slide
+      margin: 0 15px
+
+      +breakpoint(550px)
+         margin: 0
+
+   .slick-prev
+      left: -5%
+
+      &::before
+         content: url(../img/svg/team-slider-prev.svg)
+         font-size: 40px
+
+   .slick-next
+      right: -5%
+
+      &::before
+         content: url(../img/svg/team-slider-next.svg)
+         font-size: 40px
+
+.item
+   display: flex
+   flex-direction: column
+   align-items: center
+   position: relative
+   border-top: 125px solid #ebebeb
+   background-color: #fff
+
+   &__photo
+      position: absolute
+      left: 50%
+      top: -125px
+      transform: translate(-50%)
+      width: 72%
+      border: 10px solid #ebebeb
+      border-top: none
+      border-radius: 50%
+
+   &__name
+      margin-top: 45%
+      margin-bottom: 0
+      text-align: center
+      font-size: 24px
+      color: rgb(159,154,207)
+      text-transform: uppercase
+
+   &__work
+      margin-top: 30px
+      margin-bottom: 0
+      text-align: center
+      font-size: 24px
+      color: rgb(102,95,96)
+      font-family: "PT Sans", sans-serif
+      font-style: italic
+
+   &__bottom
+      margin-top: 50px
+
+.bottom
+   display: flex
+   flex-direction: row
+   justify-content: center
+   height: 50px
+   background-color: #9f9acf
+
+   &__icon
+      margin: 0 3%
+      cursor: pointer
+
 
