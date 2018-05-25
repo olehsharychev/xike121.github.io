@@ -60,5 +60,21 @@ $(document).ready(function(){
          }
       ]
    });
-   
 });
+$(window).scroll(function(){
+   if($(window).scrollTop() > 100) {
+      $('top-button').css('display', 'flex');
+   }
+});
+
+function initMap() {
+   var uluru = {lat: 46.446787, lng: 30.749397};
+   var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 17,
+      center: uluru
+   });
+   var marker = new google.maps.Marker({
+      position: uluru,
+      map: map
+   });
+}

@@ -10,6 +10,10 @@
    border-color: $main-color
    background-color: $bg-color
 
+=align-abs-center()
+   left: 50%
+   transform: translate(-50%)
+
 body,
 ul
    padding: 0
@@ -22,6 +26,16 @@ div
    margin: 0 auto
    max-width: 1600px
    font-family: 'Montserrat', sans-serif
+
+.anchor
+   margin: 0
+
+   &--about
+      align-self: flex-start
+
+   &--home
+      position: absolute
+      top: 0
 
 .first-section,
 .second-section,
@@ -91,13 +105,6 @@ div
    &__item
       text-decoration: none
       color: rgb(254,254,251)
-
-.content-wrapper
-   display: flex
-   flex-direction: column
-   align-items: center
-   justify-content: center
-   height: 100%
 
 .title
    margin: 0
@@ -273,8 +280,7 @@ div
    &__icon
       position: absolute
       top: 25%
-      left: 50%
-      transform: translate(-50%)
+      +align-abs-center()
 
    &__title
       position: absolute
@@ -289,8 +295,7 @@ div
    &__description
       position: absolute
       top: 57%
-      left: 50%
-      transform: translate(-50%)
+      +align-abs-center()
       margin: 0
       width: 70%
       font-size: 18px
@@ -451,7 +456,7 @@ div
    display: flex
    flex-direction: column
    align-items: center
-   min-height: 690px
+   min-height: 750px
    max-height: 820px
    height: 100vh
    background-color: #ebebeb
@@ -507,9 +512,8 @@ div
 
    &__photo
       position: absolute
-      left: 50%
       top: -125px
-      transform: translate(-50%)
+      +align-abs-center()
       width: 72%
       border: 10px solid #ebebeb
       border-top: none
@@ -539,6 +543,7 @@ div
    display: flex
    flex-direction: row
    justify-content: center
+   align-items: center
    height: 50px
    background-color: #9f9acf
 
@@ -546,4 +551,204 @@ div
       margin: 0 3%
       cursor: pointer
 
+.sixth-section
+   z-index: 1
+   position: relative
+   max-height: 900px
+   min-height: 700px
+   height: 100vh
+   overflow: hidden
+   background-color: #9f9acf
+   
+   &__icon
+      position: absolute
+      top: 6.6%
+      +align-abs-center()
+
+      +breakpoint(550px)
+         top: 2%
+   
+   &__title
+      z-index: 2
+      position: absolute
+      top: 15.6%
+      font-size: 36px
+      color: rgb(255,255,255)
+      text-transform: uppercase
+      text-align: center
+
+      +align-abs-center()
+
+      +breakpoint(550px)
+         top: 9%
+   
+   $adress-top: 24.4%
+
+   &__adress,
+   &__mobile
+      z-index: 2
+      position: absolute
+      top: $adress-top
+      right: 0px
+      height: 90px
+      width: 350px
+      max-width: 100%
+
+
+   &__mobile
+      top: calc(#{$adress-top} + 90px)
+
+   &__name-input,
+   &__email-input
+      box-sizing: border-box
+      width: 46.6%
+      height: 60px
+      border: none
+      border-radius: 3px
+      padding: 0 3%
+      opacity: 0.5
+      font-size: 18px
+      font-family: "PT Sans", sans-serif
+      font-style: italic
+
+   &__message-input
+      box-sizing: border-box
+      z-index: 2
+      position: absolute
+      top: 67%
+      min-width: 53%
+      max-width: 53%
+      min-height: 15%
+      max-height: 15%
+      border: none
+      border-radius: 3px
+      padding: 1.3% 2%
+      opacity: 0.5
+      font-size: 18px
+      font-family: "PT Sans", sans-serif
+      font-style: italic
+
+      +align-abs-center()
+      
+      +breakpoint(850px)
+         min-width: 75%
+         max-width: 75%
+
+      +breakpoint(500px)
+         min-width: 100%
+         max-width: 100%
+
+   &__send-btn
+      z-index: 2
+      position: absolute
+      top: 86.6%
+      height: 70px
+      border: none
+      border-bottom: 4px solid #8783b0
+      border-radius: 2px
+      font-size: 20px
+      color: rgb(255,255,255)
+      text-transform: uppercase
+      background-color: #9f9acf
+      cursor: pointer
+      +align-abs-center()
+
+      &:hover
+         border: none
+
+@keyframes slide-adress-mobile
+   from
+      right: -260px
+   to
+      right: 0
+
+.adress,
+.mobile
+   display: flex
+   flex-direction: row
+   right: -260px
+
+   &__icon
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 90px
+      background-color: #9f9acf
+      cursor: pointer
+
+   &__text
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 260px
+      background-color: #dad8e3
+      text-align: center
+
+   &:hover
+      animation-name: slide-adress-mobile
+      animation-duration: 0.5s
+      animation-timing-function: ease-in-out
+      animation-fill-mode: both
+
+.map-wrapper
+   z-index: 1
+   max-height: 900px
+   min-height: 700px
+   height: 100vh
+   opacity: 0.5
+
+.input-wrapper
+   z-index: 2
+   display: flex
+   justify-content: space-between
+   position: relative
+   top: -44.4%
+   left: 50% - 26.5%
+   width: 53%
+
+   +breakpoint(850px)
+      width: 75%
+      left: 50% - 37.5%
+
+   +breakpoint(500px)
+      width: 100%
+      left: 0
+
+.content-wrapper
+   z-index: 0
+   position: relative
+   display: flex
+   flex-direction: column
+   align-items: center
+   top: -100%
+
+.footer
+   display: flex
+   flex-direction: row
+   justify-content: space-between
+   align-items: center
+   height: 185px
+   width: 100%
+   padding: 0 15%
+   overflow: hidden
+   background-color: #9f9acf
+
+   +breakpoint(790px)
+      flex-direction: column
+      justify-content: center
+   
+   &__icon
+      margin-left: 10px
+
+.top-button
+   position: fixed
+   display: none
+   align-items: center
+   justify-content: center
+   right: 20px
+   bottom: 20px
+   width: 40px
+   height: 40px
+   background-color: #9f9acf
+   cursor: pointer
 
