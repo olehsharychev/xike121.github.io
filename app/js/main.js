@@ -29,6 +29,13 @@ $(document).ready(function(){
          }
       ]
    });
+
+   $('.menu__item, .scroll-top').click(function(e) {
+      e.preventDefault();
+      var anchorId = $(this).attr('href');
+      var top = $(anchorId).offset().top;
+      $('body,html').animate({scrollTop: top}, 1000);
+   });
    
    $('.fifth-section__team-slider').slick({
       infinite: true,
