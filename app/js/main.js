@@ -62,8 +62,11 @@ $(document).ready(function(){
    });
 });
 $(window).scroll(function(){
-   if($(window).scrollTop() > 100) {
-      $('top-button').css('display', 'flex');
+   if($(window).scrollTop() > 200) {
+      $('.top-button').css('opacity', '0.7');
+   }
+   else {
+      $('.top-button').css('opacity', '0');
    }
 });
 

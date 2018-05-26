@@ -832,8 +832,11 @@ div {
     margin-left: 10px; }
 
 .top-button {
+  z-index: 3;
   position: fixed;
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -844,5 +847,6 @@ div {
   bottom: 20px;
   width: 40px;
   height: 40px;
+  opacity: 0;
   background-color: #9f9acf;
   cursor: pointer; }
